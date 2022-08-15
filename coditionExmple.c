@@ -61,3 +61,17 @@
 //         printf("imajiner");
 //     }
 // }
+
+int main(){
+    float a, b, c;
+    scanf("%f %f %f", &a, &b, &c);
+    if(a > b && a > c){
+        printf("a the biggest");
+    }else if( b> a && b > c){
+        printf("b the biggest");
+    }else if( c > a && c> b){
+        printf(" c the biggest");
+    }else{
+        printf("there is no the biggest");
+    }
+}

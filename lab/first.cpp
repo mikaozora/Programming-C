@@ -2,7 +2,7 @@
 
 int main(){
     char nama[255];
-    printf("\"hello world\"");
+    printf("\"hello world\"\n");
 
     scanf("%s", nama);
     printf("HI, %s\n", nama);
