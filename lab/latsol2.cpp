@@ -2,7 +2,7 @@
 #include <math.h>
 
 int main(){
-    float x, y, result1, result2, result3;
+    float x, result1, result2, result3;
     printf("Operators\n");
     printf("==============\n");
     printf("Input your favorite number : ");
@@ -15,13 +15,14 @@ int main(){
     printf("Result 2 : %.2f\n", result2);
     printf("Result 3 : %.2f\n", result3);
     printf("Y = X.\n");
-    y = x;
-    if(y >= 10){
+    float *y;
+    y = &x;
+    if(*y >= 10){
         printf("Y is bigger or equals 10\n");
     }else{
         printf("Y is smaller than 10\n");
     }
-    if((int)y % 2 == 0){
+    if((int)*y % 2 == 0){
         printf("Y is even\n");
     }else{
         printf("Y is odd\n");

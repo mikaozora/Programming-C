@@ -21,7 +21,7 @@ int main()
     printf("y : %f\n", y);
     printf("y : %.2f\n", y);
     printf("---------------------------\n");
-
+    
     int a;
     printf("masukkan nilai a : ");
     scanf("%d", &a);
