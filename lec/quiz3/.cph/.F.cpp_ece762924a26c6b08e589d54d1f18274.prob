@@ -1,0 +1,1 @@
+{"name":"Local: F","url":"d:\\kuliah\\Programming\\C\\Programming-C\\lec\\quiz3\\F.cpp","tests":[{"id":1662004474874,"input":"3\n5\n1 2 3 4 5\n4\n4 4 4 4\n3\n10 1 2","output":"Case #1: 9\nCase #2: 8\nCase #3: 12"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\kuliah\\Programming\\C\\Programming-C\\lec\\quiz3\\F.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"d:\\kuliah\\Programming\\C\\Programming-C\\tut\\4\\A.cpp","tests":[{"id":1663128061416,"input":"5 abcde\n8 ujhgtfyh\n3 qwe","output":"ea\nhu\neq"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\kuliah\\Programming\\C\\Programming-C\\tut\\4\\A.cpp","group":"local","local":true}

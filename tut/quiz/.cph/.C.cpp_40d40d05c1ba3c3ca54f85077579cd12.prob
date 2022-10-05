@@ -1,0 +1,1 @@
+{"name":"Local: C","url":"d:\\kuliah\\Programming\\C\\Programming-C\\tut\\quiz\\C.cpp","tests":[{"id":1663479272333,"input":"4\n999 110\n99 999\n99 11\n99 1","output":"Case #1: 9\nCase #2: 988\nCase #3: 0\nCase #4: 90"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\kuliah\\Programming\\C\\Programming-C\\tut\\quiz\\C.cpp","group":"local","local":true}

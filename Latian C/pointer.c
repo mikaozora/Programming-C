@@ -44,22 +44,28 @@
 // }
 
 // pointer and function
+// void swap(int *a, int *b){
+//     int temp;
+//     temp = *a;
+//     *a = *b;
+//     *b = temp;
+// }
+// void sumPtr(int *a){
+//     (*a)++;
+// }
 
-void swap(int *a, int *b){
-    int temp;
-    temp = *a;
-    *a = *b;
-    *b = temp;
-}
-void sumPtr(int *a){
-    (*a)++;
-}
+// int main(){
+//     int a = 5, b = 7;
+//     swap(&a, &b);
+//     printf("a: %d\t", a);
+//     printf("b: %d\n", b);
+//     sumPtr(&a);
+//     printf("a: %d", a);
+// }
 
 int main(){
-    int a = 5, b = 7;
-    swap(&a, &b);
-    printf("a: %d\t", a);
-    printf("b: %d\n", b);
-    sumPtr(&a);
-    printf("a: %d", a);
+    int value = 0;
+    int* ptr = &value;
+    int **dptr = &ptr;
+    
 }

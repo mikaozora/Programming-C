@@ -1,0 +1,1 @@
+char *str2 = (char*)"welcome to binus"; 

@@ -2,8 +2,13 @@
 #include <math.h>
 #include <string.h>
 
-// int add(int a, int b){
-//     return a + b;
+
+// int add(int x, int y, ref int hasil){
+//     declare int input
+//     int hasil = a + b;
+//     int y = 5;
+//     // return hasil;
+//     // display hasil
 // }
 // int multiply(int a, int b);
 
@@ -13,13 +18,17 @@
 //     scanf("%d", &x);
 //     printf("masukkan nilai y: ");
 //     scanf("%d", &y);
-//     printf("x + y = %d\n", add(x, y));
+//     int hasil = 0;
+//     display hasil
+//     // printf("x + y = %d\n", add(x, y));
+//     call add(x, y, hasil);
+//     display hasil, y
 //     printf("x x y = %d", multiply(x, y));
 // }
 
 // int multiply(int a, int b){
 //     return a * b;
-//}
+// }
 
 //recursion
 // int factorial(int n){
@@ -100,20 +109,20 @@
 // }
 
 //convert decimal to binary, octal, hexadecimal
-void dectobin(int n){
-    int i = 0;
-    int bin[32];
-    while(n > 0){
-        bin[i] = n % 2;
-        i++;
-        n /= 2;
-    }
-    printf("biner: ");
-    for(int j = i - 1; j >= 0; j--){
-        printf("%d", bin[j]);
-    }
-    printf("\n");
-}
+// void dectobin(int n){
+//     int i = 0;
+//     int bin[32];
+//     while(n > 0){
+//         bin[i] = n % 2;
+//         i++;
+//         n /= 2;
+//     }
+//     printf("biner: ");
+//     for(int j = i - 1; j >= 0; j--){
+//         printf("%d", bin[j]);
+//     }
+//     printf("\n");
+// }
 // int main(){
 //     int decimal;
 //     int octal = 0, hexa = 0, i = 1;
@@ -157,33 +166,33 @@ void dectobin(int n){
 // }
 
 // hexa to binary, octal, decimal
-int main(){
-    int decimal = 0, octal = 0, length = 0, base = 1;
-    char hexa[20];
-    printf("masukkan bilangan hexadecimal: ");
-    scanf("%s", hexa); getchar();
-    length = strlen(hexa);
-    for(int i = length - 1; i >= 0; i--){
-        if(hexa[i] >= '0' && hexa[i] <= '9'){
-            decimal += (hexa[i] - 48) * base;
-            base *= 16; 
-        }else if(hexa[i] >= 'A' && hexa[i] <= 'F'){
-            decimal += (hexa[i] - 55) * base;
-            base *= 16;
-        }else if(hexa[i] >= 'a' && hexa[i] <= 'f'){
-            decimal += (hexa[i] - 87) * base;
-            base *= 16;
-        }
-    }
-    printf("decimal: %d\n", decimal);
-    //to biner
-    dectobin(decimal);
-    //to octal
-    int i = 1;
-    while(decimal > 0){
-        octal += (decimal % 8) * i;
-        i *= 10;
-        decimal /= 8;
-    }
-    printf("octal: %d", octal);
-} 
+// int main(){
+//     int decimal = 0, octal = 0, length = 0, base = 1;
+//     char hexa[20];
+//     printf("masukkan bilangan hexadecimal: ");
+//     scanf("%s", hexa); getchar();
+//     length = strlen(hexa);
+//     for(int i = length - 1; i >= 0; i--){
+//         if(hexa[i] >= '0' && hexa[i] <= '9'){
+//             decimal += (hexa[i] - 48) * base;
+//             base *= 16; 
+//         }else if(hexa[i] >= 'A' && hexa[i] <= 'F'){
+//             decimal += (hexa[i] - 55) * base;
+//             base *= 16;
+//         }else if(hexa[i] >= 'a' && hexa[i] <= 'f'){
+//             decimal += (hexa[i] - 87) * base;
+//             base *= 16;
+//         }
+//     }
+//     printf("decimal: %d\n", decimal);
+//     //to biner
+//     dectobin(decimal);
+//     //to octal
+//     int i = 1;
+//     while(decimal > 0){
+//         octal += (decimal % 8) * i;
+//         i *= 10;
+//         decimal /= 8;
+//     }
+//     printf("octal: %d", octal);
+// } 

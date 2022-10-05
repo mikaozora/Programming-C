@@ -1,1 +1,1 @@
-spaces--;
+printf("%c\n", *(ptr + 1));
