@@ -196,3 +196,15 @@
 //     }
 //     printf("octal: %d", octal);
 // } 
+
+void calc(int a, int b, int *c, int *d){
+    *c = a + b;
+    *d = a * b;
+}
+
+int main(){
+    int a, b, c, d;
+    scanf("%d %d", &a, &b);
+    calc(a, b, &c, &d);
+    printf("%d %d", c, d);
+}
