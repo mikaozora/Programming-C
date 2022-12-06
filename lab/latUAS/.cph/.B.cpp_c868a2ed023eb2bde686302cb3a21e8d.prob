@@ -1,0 +1,1 @@
+{"name":"Local: B","url":"d:\\kuliah\\Programming\\C\\Programming-C\\lab\\latUAS\\B.cpp","tests":[{"id":1668151386041,"input":"1\n2\n3 3\n9 1\n4 6\n4 3\n6 4\n3 6\n9 4","output":"Case #1: 6 1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\kuliah\\Programming\\C\\Programming-C\\lab\\latUAS\\B.cpp","group":"local","local":true}

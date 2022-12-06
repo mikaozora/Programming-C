@@ -1,0 +1,1 @@
+quickSort(height, 0, n - 1);

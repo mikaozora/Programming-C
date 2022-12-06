@@ -15,9 +15,9 @@ void pacmon(int a, int b, int x, int y, char map[][101], int visited[][101])
             {
                 return;
             }
-            else if (map[x][y] == '*' || map[x][y] == '.' || map[x][y] == 'P')
+            else if (map[x][y] == '.' || map[x][y] == 'S')
             {
-                if (map[x][y] == '*')
+                if (map[x][y] == '.')
                 {
                     count++;
                 }
@@ -54,7 +54,7 @@ int main()
             for (int k = 0; k < b; k++)
             {
                 map[j][k] = tempMap[j][k];
-                if (map[j][k] == 'P')
+                if (map[j][k] == 'S')
                 {
                     x = j;
                     y = k;

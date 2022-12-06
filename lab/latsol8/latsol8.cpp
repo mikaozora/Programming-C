@@ -47,7 +47,6 @@ int search(char *playListName)
 void swapPlaylist(int a, int b)
 {
     playlist temp = list[a];
-    // strcpy(list[a].name, list[b].name);
     list[a] = list[b];
     list[b] = temp;
 }
