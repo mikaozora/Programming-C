@@ -148,7 +148,9 @@ void popMid(int price)
             struct Food *temp = curr->next->next;
             free(curr->next);
             curr->next = temp;
-        }else{
+        }
+        else
+        {
             printf("Data not found\n");
         }
     }
@@ -165,7 +167,7 @@ int main()
     pushMid(2501);
     // popHead();
     // popTail();
-    popMid(2501);
+    popMid(2505);
     // printf("%d\n", head->next->price);
     printFoods();
 }
