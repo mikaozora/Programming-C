@@ -96,8 +96,19 @@ struct data *delRec(struct data *parent, struct data *curr){
         // parent->right = curr->right;
         // free(curr);
         return curr->right;
+    }else{
+        struct data *t = curr->left;
+        struct data *tp = curr;
+        while(t->right){
+            tp = t;
+            t = t->right;
+        }
+        curr->value = t->value;
+        t = delRec(tp, t);
+        tp->right = t;
     }
 }
+
 struct data *parent = NULL;
 void deleteNode(int value, struct data *curr){
     if(curr == NULL){
@@ -128,12 +139,19 @@ void deleteNode(int value, struct data *curr){
 
 int main()
 {
-    insert(root, 20);
     insert(root, 10);
-    insert(root, 30);
-    insert(root, 50);
+	insert(root, 20);
+	insert(root, 9);
+	insert(root, 5);
+	insert(root, 11);
+	insert(root, 1);
+	insert(root, 12);
+	insert(root, 25);
+	insert(root, 30);
+	insert(root, 35);
+	insert(root, 40);
     displayInfix(root);
     search(root, 5);
-    deleteNode(30, root);
+    deleteNode(10, root);
     displayInfix(root);
 }
