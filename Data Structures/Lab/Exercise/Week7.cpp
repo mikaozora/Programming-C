@@ -50,6 +50,7 @@ Food *rightRotate(Food *root){
 
     return newParent;
 }
+
 Food *leftRotate(Food *root){
     Food *newParent = root->right;
     root->right = newParent->left;
@@ -102,6 +103,55 @@ Food *updateFood(Food *root, int price, const char* name){
     return root;
 }
 
+Food *deleteFood(Food* root, int price){
+    if(!root){
+        return root;
+    }else if(price < root->price){
+        root->left = deleteFood(root->left, price);
+    }else if(price > root->price){
+        root->right = deleteFood(root->right, price);
+    }else{
+        if(!root->left && !root->right){
+            free(root);
+            root = NULL;
+        }else if(!root->left){
+            Food *del = root;
+            root = del->right;
+            free(del);
+            del = NULL;
+        }else if(!root->right){
+            Food *del = root;
+            root = del->left;
+            free(del);
+            del = NULL;
+        }else{
+            Food *temp = root->left;
+            while(temp->right){
+                temp = temp->right;
+            }
+            strcpy(root->name, temp->name);
+            root->price = temp->price;  
+            root->left = deleteFood(root->left, temp->price);
+        }
+    }
+
+    int balance = getBalance(root);
+
+    if(balance > 1){
+        if(price > root->left->price){
+            root->left = leftRotate(root->left);
+        }
+        return rightRotate(root);
+    }else if(balance < -1){
+        if(price < root->right->price){
+            root->right = rightRotate(root->right);
+        }
+        return leftRotate(root);
+    }
+
+    return root;
+}
+
 void display(Food *curr){
     if(!curr){
         return;
@@ -118,9 +168,17 @@ int main(){
     root = insertFood(root, "naspad", 200000);
     root = insertFood(root, "sate ular", 15000);
     root = insertFood(root, "Sate hamster", 500000);
+    root = insertFood(root, "Sate badak", 100);
+    root = insertFood(root, "Mie ayam", 5000);
+    root = insertFood(root, "Soto malaysia", 9000);
+    root = insertFood(root, "Soto Ketan", 800000);
+    root = insertFood(root, "Aqua", 1234);
     display(root);
     printf("================\n");
     root = updateFood(root, 10000, "Pecel lele");
+    display(root);
+    root = deleteFood(root, 1);
+    printf("=================\n");
     display(root);
 
     return 0;
